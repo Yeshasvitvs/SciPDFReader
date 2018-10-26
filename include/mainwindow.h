@@ -23,20 +23,16 @@ protected:
 private slots:
         void newFile();
         void open();
-        bool save();
-        bool saveAs();
         void about();
         void documentWasModified();
 
 private:
         QMenu* fileMenu;
-        QMenu* editMenu;
         QMenu* viewMenu;
         QMenu* windowMenu;
         QMenu* helpMenu;
 
         QToolBar* fileToolBar;
-        QToolBar* editToolBar;
         QToolBar* viewToolBar;
         QToolBar* navToolBar;
 
