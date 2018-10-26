@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>../images/copy.png</file>
+    <file>../images/cut.png</file>
+    <file>../images/new.png</file>
+    <file>../images/open.png</file>
+    <file>../images/paste.png</file>
+    <file>../images/save.png</file>
+    <file>../images/zoom-in.png</file>
+    <file>../images/zoom-out.png</file>
+    <file>../images/zoom-reset.png</file>
+    <file>../images/page-down.png</file>
+    <file>../images/page-up.png</file>
+</qresource>
+</RCC>
