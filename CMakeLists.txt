@@ -15,16 +15,19 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt5Widgets CONFIG REQUIRED)
 
 # Populate a CMake variable with the headers and sources
-set(HEADERS include/mainwindow.h)
+set(HEADERS include/mainwindow.h
+            include/PDFManager.h
+)
 
 set(SOURCES src/main.cpp
             src/mainwindow.cpp
+            src/PDFManager.cpp
 )
 
 qt5_add_resources(RESOURCES resources/resource.qrc)
 add_executable(${PROJECT_NAME} WIN32 ${HEADERS} ${SOURCES} ${RESOURCES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include -I /usr/include/poppler/qt5 -I /usr/include/poppler)
 
 # Use the Widgets module from Qt 5
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets ${QT_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets ${QT_LIBRARIES} -lpoppler-qt5)
